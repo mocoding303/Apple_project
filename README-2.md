@@ -87,16 +87,16 @@ The project is split into three tiers of questions to test SQL skills of increas
 2. Calculate the total number of units sold by each store.
 
 ``` sql
-SELECT 
-	s.store_id,
-	st.store_name,
-	SUM(s.quantity) as total_unit_sold
-FROM sales as s
-JOIN
-stores as st
-ON st.store_id = s.store_id
-GROUP BY 1, 2
-ORDER BY 3 DESC
+	 SELECT 
+		s.store_id,
+		st.store_name,
+		SUM(s.quantity) as total_unit_sold
+	FROM sales as s
+	JOIN
+	stores as st
+	ON st.store_id = s.store_id
+	GROUP BY 1, 2
+	ORDER BY 3 DESC
 ```
 3. Identify how many sales occurred in December 2023.
 
