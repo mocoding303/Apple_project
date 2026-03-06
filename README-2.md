@@ -101,7 +101,7 @@ The project is split into three tiers of questions to test SQL skills of increas
 
 3. Identify how many sales occurred in December 2023.
 
-``` sql
+```sql
 SELECT 
 	COUNT(sale_id) as total_sale 
 FROM sales
