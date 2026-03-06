@@ -90,7 +90,7 @@ The project is split into three tiers of questions to test SQL skills of increas
 SELECT
     s.store_id,
     st.store_name,
-    SUM(s.quantity) AS total_unit_sold
+    SUM(s.quantity) AS total_units_sold
 FROM sales AS s
 JOIN stores AS st
     ON st.store_id = s.store_id
