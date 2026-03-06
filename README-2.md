@@ -75,6 +75,7 @@ The project is split into three tiers of questions to test SQL skills of increas
 ### Easy to Medium (10 Questions)
 
 1. Find the number of stores in each country.
+
    ``` sql
 	   SELECT 
 		country,
@@ -84,6 +85,7 @@ The project is split into three tiers of questions to test SQL skills of increas
 	ORDER BY 2 DESC
 ```
 2. Calculate the total number of units sold by each store.
+
 ``` sql
 SELECT 
 	s.store_id,
@@ -97,6 +99,7 @@ GROUP BY 1, 2
 ORDER BY 3 DESC
 ```
 3. Identify how many sales occurred in December 2023.
+
 ``` sql
 SELECT 
 	COUNT(sale_id) as total_sale 
@@ -115,7 +118,8 @@ WHERE store_id NOT IN (
 						);
 ```
 5. Calculate the percentage of warranty claims marked as "Warranty Void".
-   ```sql
+
+    ```sql
    SELECT 
 	ROUND
 		(COUNT(claim_id)/
@@ -126,6 +130,7 @@ FROM warranty
 WHERE repair_status = 'Warranty Void'
 ```
 6. Identify which store had the highest total units sold in the last year.
+
 ```sql
 SELECT 
 	s.store_id,
@@ -141,6 +146,7 @@ LIMIT 1
 ```
 
 7. Count the number of unique products sold in the last year.
+
 ```sql
 SELECT 
 	COUNT(DISTINCT product_id)
@@ -148,7 +154,8 @@ FROM sales
 WHERE sale_date >= (CURRENT_DATE - INTERVAL '1 year')
 ```
 8. Find the average price of products in each category.
-    ```sql
+
+   ```sql
     SELECT 
 	p.category_id,
 	c.category_name,
@@ -161,6 +168,7 @@ GROUP BY 1, 2
 ORDER BY 3 DESC
 ```
 9. How many warranty claims were filed in 2020?
+
 ```sql
 SELECT 
 	COUNT(*) as warranty_claim
@@ -168,6 +176,7 @@ FROM warranty
 WHERE EXTRACT(YEAR FROM claim_date) = 2020
 ```
 10. For each store, identify the best-selling day based on highest quantity sold.
+
 ```sql
 SELECT  * 
 FROM
