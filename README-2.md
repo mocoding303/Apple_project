@@ -85,7 +85,7 @@ The project is split into three tiers of questions to test SQL skills of increas
 	ORDER BY 2 DESC
 ```
 2. Calculate the total number of units sold by each store.
-``` sql
+```sql
 SELECT 
 		s.store_id,
 		st.store_name,
